@@ -9,11 +9,12 @@ const MainContainer = () => {
 
     useEffect(() => {});
 
+    const findCharity = () => {};
+
     return (
         <div>
-            <h1>Find your favorite charity by filling out some information.</h1>
-            <h3>Your results will be shown below.</h3>
-            <FindCharitiesForm />
+            <h1>Welcome to CharityFinder. We help you help others.</h1>
+            <FindCharitiesForm findCharity={findCharity} />
         </div>
     );
 };
