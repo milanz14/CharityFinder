@@ -33,7 +33,7 @@ const FindCharitiesForm = ({ findCharity }) => {
             <form onSubmit={handleSubmit}>
                 <h4>
                     Search for a charity. Fill out as much information as you
-                    can..
+                    can. We'll do the rest.
                 </h4>
                 <div>
                     <label htmlFor="city">City: </label>
