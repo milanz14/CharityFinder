@@ -1,16 +1,41 @@
 import React, { useState, useEffect } from "react";
 import FindCharitiesForm from "./FindCharitiesForm";
+import axios from "axios";
 import "../styles/MainContainer.css";
-const { user_key } = require("../utilities/config");
+const { user_key, CHARITY_SEARCH_URL } = require("../utilities/config");
 
 const MainContainer = () => {
-    const INITIAL_STATE = {};
-    const [charityInfo, setCharityInfo] = useState(INITIAL_STATE);
+    const [charityInfo, setCharityInfo] = useState({});
     const [hasCharityData, setHasCharityData] = useState(false);
 
-    useEffect(() => {});
+    useEffect(() => {
+        fetch(charityInfo);
+    }, [charityInfo]);
 
-    const findCharity = () => {};
+    const findCharity = (city, state, zipCode, category) => {
+        setCharityInfo({
+            city,
+            state,
+            zipCode,
+            category,
+        });
+        console.log(charityInfo);
+        // fetch(charityInfo);
+    };
+
+    const fetch = (data) => {
+        axios
+            .post(
+                `${CHARITY_SEARCH_URL}?user_key=${user_key}&city=${data.city}`,
+                data
+            )
+            .then((resp) => {
+                console.log(resp.data.city);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
 
     return (
         <div>
@@ -20,6 +45,7 @@ const MainContainer = () => {
                     <FindCharitiesForm findCharity={findCharity} />
                 </div>
             )}
+            {/* <div>{charityInfo.map((c) => ({ c }))}</div> */}
         </div>
     );
 };

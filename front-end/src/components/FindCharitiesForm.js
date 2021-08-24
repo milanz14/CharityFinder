@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button, Col, FormGroup, Label, Input } from "reactstrap";
 
 const FindCharitiesForm = ({ findCharity }) => {
     const INITIAL_STATE = {
@@ -26,6 +25,7 @@ const FindCharitiesForm = ({ findCharity }) => {
             formData.zipCode,
             formData.category
         );
+        setFormData(INITIAL_STATE);
     };
 
     return (
