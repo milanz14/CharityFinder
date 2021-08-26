@@ -7,6 +7,7 @@ const {
 
 const MainContainer = () => {
     const headers = {
+        Accept: "application/json",
         Authorization: `Bearer ${pledge_api_key}`,
     };
 
