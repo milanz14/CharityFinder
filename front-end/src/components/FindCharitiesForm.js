@@ -46,7 +46,9 @@ const FindCharitiesForm = ({ findCharity }) => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="state">State: </label>
+                    <label htmlFor="state">
+                        State (Two Letter Abbreviation):{" "}
+                    </label>
                     <input
                         type="text"
                         name="state"
