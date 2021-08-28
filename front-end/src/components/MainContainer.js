@@ -3,6 +3,8 @@ import axios from "axios";
 const {
     pledge_api_key,
     PLEDGE_ORGANIZATIONS_ENDPOINT,
+    user_key,
+    CATEGORY_SEARCH_URL,
 } = require("../utilities/config");
 
 const MainContainer = () => {
@@ -14,10 +16,13 @@ const MainContainer = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await axios.get(PLEDGE_ORGANIZATIONS_ENDPOINT, {
-                headers,
-            });
-            console.log(res);
+            const res = await axios.get(
+                `http://cors-anywhere.herokuapp.com/${PLEDGE_ORGANIZATIONS_ENDPOINT}`,
+                {
+                    headers,
+                }
+            );
+            console.log(res.data);
         };
         fetchData();
     }, []);
