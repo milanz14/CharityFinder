@@ -7,22 +7,20 @@ const {
 
 const MainContainer = () => {
     const headers = {
-        Accept: "application/json",
         Authorization: `Bearer ${pledge_api_key}`,
     };
 
     const [data, setData] = useState({});
 
     useEffect(() => {
-        fetch();
+        const fetchData = async () => {
+            const res = await axios.get(PLEDGE_ORGANIZATIONS_ENDPOINT, {
+                headers,
+            });
+            console.log(res);
+        };
+        fetchData();
     }, []);
-
-    const fetch = () => {
-        axios
-            .get(PLEDGE_ORGANIZATIONS_ENDPOINT, { headers })
-            .then((resp) => console.log(resp))
-            .catch((err) => console.log(err));
-    };
 
     return (
         <div>
