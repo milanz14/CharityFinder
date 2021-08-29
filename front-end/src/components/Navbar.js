@@ -9,8 +9,12 @@ const Navbar = () => {
                 <NavLink exact activeClassName="Navbar-active" to="/">
                     Home
                 </NavLink>
-                <NavLink exact activeClassName="Navbar-active" to="/all">
-                    All Charities
+                <NavLink
+                    exact
+                    activeClassName="Navbar-active"
+                    to="/organizations"
+                >
+                    Organizations
                 </NavLink>
                 <NavLink exact activeClassName="Navbar-active" to="/categories">
                     Category Search
