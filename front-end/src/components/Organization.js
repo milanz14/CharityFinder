@@ -1,4 +1,5 @@
 import React from "react";
+// const { PLEDGE_ORGANIZATIONS_ENDPOINT } = require("../utilities/config");
 
 const Organization = ({ id, name, city, zip, url, street, state }) => {
     return (
@@ -9,10 +10,17 @@ const Organization = ({ id, name, city, zip, url, street, state }) => {
                     <p className="card-text">
                         {street}
                         {", "}
+                        {city}
+                        {", "}
                         {state}
                         {", "}
                         {zip}
                     </p>
+                    {/* <a
+                        href={`http://cors-anywhere.herokuapp.com/${PLEDGE_ORGANIZATIONS_ENDPOINT}/${id}`}
+                    >
+                        More Info
+                    </a> */}
                     <button onClick={() => window.open(url)}>Donate</button>
                 </div>
             </div>
