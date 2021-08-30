@@ -9,3 +9,7 @@
 ## Technologies Used:
     * React
     * Jest (testing)
+
+
+## API:
+    * The API used for this is 

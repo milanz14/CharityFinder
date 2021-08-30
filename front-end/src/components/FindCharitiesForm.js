@@ -25,7 +25,7 @@ const FindCharitiesForm = ({ findCharity }) => {
             formData.zipCode,
             formData.category
         );
-        setFormData(INITIAL_STATE);
+        // setFormData(INITIAL_STATE);
     };
 
     return (
