@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import FindCharitiesForm from "./FindCharitiesForm";
+import Charity from "./Charity";
 import "../styles/MainContainer.css";
 import axios from "axios";
 
 const { user_key, CHARITY_SEARCH_URL } = require("../utilities/config");
 
-const MainContainer = () => {
+const SearchRouteContainer = () => {
     const INITIAL_STATE = {
         city: "",
         state: "",
@@ -15,17 +16,15 @@ const MainContainer = () => {
     const [charityInfo, setCharityInfo] = useState(INITIAL_STATE);
     const [hasCharityData, setHasCharityData] = useState(false);
 
-    useEffect(() => {}, []);
+    // useEffect(() => {}, []);
 
     const findCharity = async (city, state, zipCode, category) => {
-        setCharityInfo({ city, state, zipCode, category });
-        console.log(charityInfo);
-
         const res = await axios.post(
-            `http://cors-anywhere.herokuapp.com/${CHARITY_SEARCH_URL}?user_key=${user_key}&city=miami&state=${charityInfo.state}&zipCode=${charityInfo.zipCode}&category=${charityInfo.category}`
+            `http://cors-anywhere.herokuapp.com/${CHARITY_SEARCH_URL}?user_key=${user_key}&city=${city}&state=${state}&zipCode=${zipCode}&category=${category}`
         );
-
-        console.log(res);
+        setCharityInfo(res.data.data);
+        setHasCharityData(true);
+        console.log(charityInfo);
     };
 
     return (
@@ -36,8 +35,12 @@ const MainContainer = () => {
                     <FindCharitiesForm findCharity={findCharity} />
                 </div>
             )}
+            {/* { hasCharityData ? 
+                {charityInfo.map((char) => (
+                    <Charity category={char.category} />
+                ))} : <p></p> } */}
         </div>
     );
 };
 
-export default MainContainer;
+export default SearchRouteContainer;
