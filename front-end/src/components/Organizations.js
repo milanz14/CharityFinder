@@ -42,7 +42,7 @@ const Organizations = () => {
             <button
                 onClick={goBackward}
                 disabled={currentPage === 1 ? true : false}
-                className="icon-back"
+                className="icon-back btn-grad"
             >
                 Previous Page
             </button>
@@ -51,12 +51,12 @@ const Organizations = () => {
                 disabled={
                     currentPage === Math.floor(totalCount / 25) ? true : false
                 }
-                className="icon-forward"
+                className="icon-forward btn-grad"
             >
                 Next Page
             </button>
 
-            <h2>All Organizations...</h2>
+            <h2>Pick a Charity Below and Donate. It's that simple.</h2>
             <div className="container">
                 {organizationData.map((o) => (
                     <Organization

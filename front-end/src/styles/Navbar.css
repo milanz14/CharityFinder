@@ -1,6 +1,15 @@
 .Navbar {
     display: flex;
     justify-content: space-around;
-    background-color: gray;
+    background-color: blue;
     padding: 30px;
+    color: white;
+}
+
+.Navbar-active {
+    color: white;
+}
+
+.nav-link {
+    color: white;
 }
