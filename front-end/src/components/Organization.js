@@ -1,28 +1,24 @@
 import React from "react";
-// const { PLEDGE_ORGANIZATIONS_ENDPOINT } = require("../utilities/config");
+import GetDetailsBtn from "./GetDetailsBtn";
+import "../styles/Organization.css";
 
 const Organization = ({ id, name, city, zip, url, street, state }) => {
     return (
-        <div>
-            <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
-                    <p className="card-text">
-                        {street}
-                        {", "}
-                        {city}
-                        {", "}
-                        {state}
-                        {", "}
-                        {zip}
-                    </p>
-                    {/* <a
-                        href={`http://cors-anywhere.herokuapp.com/${PLEDGE_ORGANIZATIONS_ENDPOINT}/${id}`}
-                    >
-                        More Info
-                    </a> */}
-                    <button onClick={() => window.open(url)}>Donate</button>
-                </div>
+        <div className="card">
+            <div className="card-body">
+                <h5 className="card-title">{name}</h5>
+                <p className="card-text">
+                    {street}
+                    {", "}
+                    {city}
+                    {", "}
+                    {state}
+                    {", "}
+                    {zip}
+                </p>
+                {/* look at adding in a Modal here to open when you click on a specific organization's details */}
+                {/* <GetDetailsBtn id={id} /> */}
+                <button onClick={() => window.open(url)}>Donate!</button>
             </div>
         </div>
     );

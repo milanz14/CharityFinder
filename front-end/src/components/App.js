@@ -1,7 +1,5 @@
 import Routes from "./Routes";
 import Navbar from "./Navbar";
-import SearchRouteContainer from "./SearchRouteContainer";
-import Organizations from "./Organizations";
 import "../styles/App.css";
 
 function App() {
@@ -9,8 +7,6 @@ function App() {
         <div className="App">
             <Navbar />
             <Routes />
-            {/* <SearchRouteContainer /> */}
-            <Organizations />
         </div>
     );
 }
