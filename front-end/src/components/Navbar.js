@@ -6,7 +6,12 @@ const Navbar = () => {
     return (
         <div>
             <nav className="Navbar">
-                <NavLink exact activeClassName="Navbar-active" to="/">
+                <NavLink
+                    exact
+                    className="nav-link"
+                    activeClassName="Navbar-active"
+                    to="/"
+                >
                     Home
                 </NavLink>
                 <NavLink
@@ -16,13 +21,28 @@ const Navbar = () => {
                 >
                     Organizations
                 </NavLink>
-                <NavLink exact activeClassName="Navbar-active" to="/categories">
+                <NavLink
+                    exact
+                    className="nav-link"
+                    activeClassName="Navbar-active"
+                    to="/categories"
+                >
                     Category Search
                 </NavLink>
-                <NavLink exact activeClassName="Navbar-active" to="/locations">
+                <NavLink
+                    exact
+                    className="nav-link"
+                    activeClassName="Navbar-active"
+                    to="/locations"
+                >
                     Location Seach
                 </NavLink>
-                <NavLink exact activeClassName="Navbar-active" to="/register">
+                <NavLink
+                    exact
+                    className="nav-link"
+                    activeClassName="Navbar-active"
+                    to="/register"
+                >
                     Register
                 </NavLink>
             </nav>

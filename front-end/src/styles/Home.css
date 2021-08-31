@@ -1,0 +1,21 @@
+.home-title {
+    padding: 50px;
+    margin: 45px;
+}
+
+.home-btn {
+    font: bold 11px;
+    text-decoration: none;
+    background-color: blue;
+    color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 200ms ease-in;
+}
+
+.home-btn:hover {
+    transition: scale(0.98);
+    background-color: #fff;
+    color: blue;
+    border: 10px 10px 10px black;
+}

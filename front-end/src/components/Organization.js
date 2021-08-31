@@ -18,7 +18,9 @@ const Organization = ({ id, name, city, zip, url, street, state }) => {
                 </p>
                 {/* look at adding in a Modal here to open when you click on a specific organization's details */}
                 {/* <GetDetailsBtn id={id} /> */}
-                <button onClick={() => window.open(url)}>Donate!</button>
+                <button className="card-btn" onClick={() => window.open(url)}>
+                    Donate
+                </button>
             </div>
         </div>
     );

@@ -11,6 +11,12 @@
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.35);
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
+    background-image: linear-gradient(
+        to right,
+        #ff8008 0%,
+        #ffc837 51%,
+        #ff8008 100%
+    );
 }
 
 .card:hover {
@@ -28,7 +34,7 @@
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.1s;
     transition-duration: 0.1s;
-    padding: 0.3em 1.2em;
+    padding: 10px;
     margin: 0 0.1em 0.1em 0;
     border: 0.16em solid rgba(255, 255, 255, 0);
     border-radius: 2em;
@@ -39,7 +45,7 @@
     color: black;
     text-align: center;
     transition: all 0.2s;
-    background-color: lightslategrey;
+    background-color: white;
 }
 
 .icon-back:hover {
@@ -55,7 +61,7 @@
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.1s;
     transition-duration: 0.1s;
-    padding: 0.3em 1.2em;
+    padding: 10px;
     margin: 0 0.1em 0.1em 0;
     border: 0.16em solid rgba(255, 255, 255, 0);
     border-radius: 2em;
@@ -66,10 +72,37 @@
     color: black;
     text-align: center;
     transition: all 0.2s;
-    background-color: lightslategrey;
+    background-color: white;
 }
 
 .icon-forward:hover {
     -webkit-transform: translateX(4px);
     transform: translateX(4px);
+}
+
+.btn-grad {
+    background-image: linear-gradient(
+        to right,
+        #ff8008 0%,
+        #ffc837 51%,
+        #ff8008 100%
+    );
+}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
