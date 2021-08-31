@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Organization from "./Organization";
+import "../styles/Organizations.css";
 import axios from "axios";
 
 const {
@@ -15,7 +16,6 @@ const Organizations = () => {
     const [organizationData, setOrganizationData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalCount, setTotalCount] = useState(0);
-    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,14 +23,11 @@ const Organizations = () => {
                 `http://cors-anywhere.herokuapp.com/${PLEDGE_ORGANIZATIONS_ENDPOINT}?page=${currentPage}`,
                 { headers }
             );
-            console.log(res.data);
+            console.log(res.data.results);
             setOrganizationData(res.data.results);
             setTotalCount(res.data.total_count);
         };
         fetchData();
-        if (!organizationData) {
-            setIsLoading(true);
-        }
     }, [currentPage]);
 
     const goForward = () => setCurrentPage((currentPage) => currentPage + 1);
@@ -41,25 +38,39 @@ const Organizations = () => {
             <p>
                 Page {currentPage}/{Math.floor(totalCount / 25)}
             </p>
-            {currentPage > 0 && (
-                <button onClick={goBackward}>Previous Page</button>
-            )}
-            {currentPage < Math.floor(totalCount / 25) && (
-                <button onClick={goForward}>Next Page</button>
-            )}
 
-            <h2>Data for Organizations...</h2>
-            {organizationData.map((o) => (
-                <Organization
-                    key={o.id}
-                    name={o.name}
-                    city={o.city}
-                    zip={o.postal_code}
-                    url={o.profile_url}
-                    street={o.street1}
-                    state={o.region}
-                />
-            ))}
+            <button
+                onClick={goBackward}
+                disabled={currentPage === 1 ? true : false}
+                className="icon-back"
+            >
+                Previous Page
+            </button>
+            <button
+                onClick={goForward}
+                disabled={
+                    currentPage === Math.floor(totalCount / 25) ? true : false
+                }
+                className="icon-forward"
+            >
+                Next Page
+            </button>
+
+            <h2>All Organizations...</h2>
+            <div className="container">
+                {organizationData.map((o) => (
+                    <Organization
+                        className="container"
+                        key={o.id}
+                        name={o.name}
+                        city={o.city}
+                        zip={o.postal_code}
+                        url={o.profile_url}
+                        street={o.street1}
+                        state={o.region}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
