@@ -6,43 +6,19 @@ const Navbar = () => {
     return (
         <div>
             <nav className="Navbar">
-                <NavLink
-                    exact
-                    className="nav-link"
-                    activeClassName="Navbar-active"
-                    to="/"
-                >
+                <NavLink exact className="nav-link" to="/">
                     Home
                 </NavLink>
-                <NavLink
-                    exact
-                    activeClassName="Navbar-active"
-                    to="/organizations"
-                >
+                <NavLink exact className="nav-link" to="/organizations">
                     Organizations
                 </NavLink>
-                <NavLink
-                    exact
-                    className="nav-link"
-                    activeClassName="Navbar-active"
-                    to="/categories"
-                >
+                <NavLink exact className="nav-link" to="/categories">
                     Category Search
                 </NavLink>
-                <NavLink
-                    exact
-                    className="nav-link"
-                    activeClassName="Navbar-active"
-                    to="/locations"
-                >
+                <NavLink exact className="nav-link" to="/locations">
                     Location Seach
                 </NavLink>
-                <NavLink
-                    exact
-                    className="nav-link"
-                    activeClassName="Navbar-active"
-                    to="/register"
-                >
+                <NavLink exact className="nav-link" to="/register">
                     Register
                 </NavLink>
             </nav>
