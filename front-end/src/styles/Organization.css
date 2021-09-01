@@ -13,10 +13,11 @@
     transition-duration: 0.5s;
     background-image: linear-gradient(
         to right,
-        #ff8008 0%,
-        #ffc837 51%,
-        #ff8008 100%
+        #7b08ff 0%,
+        #7e4cfb 51%,
+        #7b08ff 100%
     );
+    color: white;
 }
 
 .card:hover {
@@ -83,9 +84,9 @@
 .btn-grad {
     background-image: linear-gradient(
         to right,
-        #ff8008 0%,
-        #ffc837 51%,
-        #ff8008 100%
+        #7b08ff 0%,
+        #7e4cfb 51%,
+        #7b08ff 100%
     );
 }
 .btn-grad {

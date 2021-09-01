@@ -1,13 +1,23 @@
 .Navbar {
     display: flex;
     justify-content: space-around;
-    background-color: blue;
+    background-color: rgba(80, 80, 238, 0.8);
     padding: 30px;
-    color: white;
 }
 
-.Navbar-active {
+.Navbar a {
+    color: cornsilk;
+    transition: all 200ms ease-in;
+}
+
+.Navbar a:hover {
+    transform: scale(0.95);
+    color: black;
+}
+
+.Navbar a.active {
     color: white;
+    text-decoration: underline;
 }
 
 .nav-link {
