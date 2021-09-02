@@ -1,11 +1,12 @@
 import React from "react";
 import CategorySearchForm from "./CategorySearchForm";
+import "../styles/CategorySearch.css";
 
 const CategorySearch = () => {
     return (
-        <div>
+        <div className="category-search">
             <h1>Category Search Page...</h1>
-            {/* <CategorySearchForm /> */}
+            <CategorySearchForm />
         </div>
     );
 };

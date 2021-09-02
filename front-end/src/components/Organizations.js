@@ -42,7 +42,7 @@ const Organizations = () => {
             <button
                 onClick={goBackward}
                 disabled={currentPage === 1 ? true : false}
-                className="icon-back btn-grad"
+                className="icon-back btn btn-primary"
             >
                 Previous Page
             </button>
@@ -51,12 +51,16 @@ const Organizations = () => {
                 disabled={
                     currentPage === Math.floor(totalCount / 25) ? true : false
                 }
-                className="icon-forward btn-grad"
+                className="icon-forward btn btn-primary"
             >
                 Next Page
             </button>
 
-            <h2>Pick a Charity Below and Donate. It's that simple.</h2>
+            <h4>Pick a Charity Below and Donate. It's that simple.</h4>
+            <h4>
+                Use the navbar links to search for a specific cause or for a
+                charity in a specific location.
+            </h4>
             <div className="container">
                 {organizationData.map((o) => (
                     <Organization
