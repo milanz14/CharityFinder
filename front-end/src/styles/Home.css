@@ -1,12 +1,18 @@
+.home {
+    background-color: #97caef;
+    height: 100vh;
+}
+
 .home-title {
     padding: 50px;
     margin: 45px;
+    color: white;
 }
 
 .home-btn {
     font: bold 11px;
     text-decoration: none;
-    background-color: blue;
+    background-color: rgb(81, 0, 255);
     color: #fff;
     padding: 15px;
     border-radius: 15px;
@@ -15,7 +21,7 @@
 
 .home-btn:hover {
     transition: scale(0.98);
-    background-color: #fff;
-    color: blue;
+    background-color: rgb(122, 63, 249);
+    color: white;
     border: 10px 10px 10px black;
 }

@@ -11,13 +11,7 @@
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.35);
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    background-image: linear-gradient(
-        to right,
-        #7b08ff 0%,
-        #7e4cfb 51%,
-        #7b08ff 100%
-    );
-    color: white;
+    color: #35a4f3;
 }
 
 .card:hover {
@@ -82,12 +76,7 @@
 }
 
 .btn-grad {
-    background-image: linear-gradient(
-        to right,
-        #7b08ff 0%,
-        #7e4cfb 51%,
-        #7b08ff 100%
-    );
+    background-color: rgb(81, 0, 255);
 }
 .btn-grad {
     margin: 10px;
