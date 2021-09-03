@@ -2,7 +2,6 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Organizations from "./Organizations";
 import Home from "./Home";
 import CategorySearch from "./CategorySearch";
-import LocationSearch from "./LocationSearch";
 
 const Routes = () => {
     return (
@@ -15,9 +14,6 @@ const Routes = () => {
             </Route>
             <Route exact path="/categories">
                 <CategorySearch />
-            </Route>
-            <Route exact path="/locations">
-                <LocationSearch />
             </Route>
         </Switch>
     );
