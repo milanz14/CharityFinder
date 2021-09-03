@@ -10,13 +10,10 @@ const Navbar = () => {
                     Home
                 </NavLink>
                 <NavLink exact className="nav-link" to="/organizations">
-                    Organizations
+                    All Organizations
                 </NavLink>
                 <NavLink exact className="nav-link" to="/categories">
-                    Category Search
-                </NavLink>
-                <NavLink exact className="nav-link" to="/locations">
-                    Location Seach
+                    Search
                 </NavLink>
                 <NavLink exact className="nav-link" to="/register">
                     Register
