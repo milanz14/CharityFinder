@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
 const Home = () => {
     return (
         <div className="home">
             <h1 className="home-title">Feeling Charitable?</h1>
-            <a href="/organizations" className="home-btn">
+            <Link to="/organizations" className="home-btn">
                 Let's Get Started
-            </a>
+            </Link>
         </div>
     );
 };

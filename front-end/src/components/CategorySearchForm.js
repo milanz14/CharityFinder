@@ -4,7 +4,7 @@ import "../styles/CategorySearchForm.css";
 const CategorySearchForm = ({ getData }) => {
     const INITIAL_STATE = {
         q: "",
-        cause: "",
+        cause_id: null,
         region: "",
         postal_code: "",
     };
@@ -65,6 +65,7 @@ const CategorySearchForm = ({ getData }) => {
                 <div className="mb-3 col-6 center">
                     <label htmlFor="cause_id">Cause</label>
                     <select
+                        defaultValue=""
                         className="form-select"
                         value={formValue.cause_id}
                         onChange={handleChange}
