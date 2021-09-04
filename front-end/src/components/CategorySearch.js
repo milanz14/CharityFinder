@@ -24,9 +24,10 @@ const CategorySearch = () => {
     useEffect(() => {
         const fetchData = async () => {
             const res = await axios.get(
-                `http://cors-anywhere.herokuapp.com/${PLEDGE_ORGANIZATIONS_ENDPOINT}?q=${payload.q}&region=${payload.region}&cause=${payload.cause}&postal_code=${payload.postal_code}&page=${currentPage}`,
+                `http://cors-anywhere.herokuapp.com/${PLEDGE_ORGANIZATIONS_ENDPOINT}?q=${payload.q}&region=${payload.region}&cause_id=${payload.cause_id}&postal_code=${payload.postal_code}&page=${currentPage}`,
                 { headers }
             );
+            console.log(payload.cause_id);
             console.log(res);
             console.log(res.data.results);
             console.log(payload);
@@ -36,9 +37,9 @@ const CategorySearch = () => {
         fetchData();
     }, [currentPage, payload]);
 
-    const getData = (q, cause, region, postal_code) => {
+    const getData = (q, cause_id, region, postal_code) => {
         setPayload({});
-        setPayload({ ...payload, q, cause, region, postal_code });
+        setPayload({ ...payload, q, cause_id, region, postal_code });
         setHasPayloadData(true);
     };
 

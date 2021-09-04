@@ -22,7 +22,7 @@ const CategorySearchForm = ({ getData }) => {
         // console.log(formValue);
         getData(
             formValue.q,
-            formValue.cause,
+            formValue.cause_id,
             formValue.region,
             formValue.postal_code
         );
@@ -32,7 +32,7 @@ const CategorySearchForm = ({ getData }) => {
     return (
         <form className="form" onSubmit={handleSubmit}>
             <div className="row">
-                <div className="mb-3 col-8 center">
+                <div className="mb-3 col-6 center">
                     <label htmlFor="q">Keyword Search</label>
                     <input
                         name="q"
@@ -42,7 +42,7 @@ const CategorySearchForm = ({ getData }) => {
                         onChange={handleChange}
                     ></input>
                 </div>
-                <div className="mb-3 col-8 center">
+                <div className="mb-3 col-6 center">
                     <label htmlFor="region">Region (2 Letter state code)</label>
                     <input
                         name="region"
@@ -52,7 +52,7 @@ const CategorySearchForm = ({ getData }) => {
                         onChange={handleChange}
                     ></input>
                 </div>
-                <div className="mb-3 col-8 center">
+                <div className="mb-3 col-6 center">
                     <label htmlFor="postal_code">ZIP Code</label>
                     <input
                         name="postal_code"
@@ -62,14 +62,14 @@ const CategorySearchForm = ({ getData }) => {
                         onChange={handleChange}
                     ></input>
                 </div>
-                <div className="mb-3 col-8 center">
-                    <label htmlFor="cause">Cause</label>
+                <div className="mb-3 col-6 center">
+                    <label htmlFor="cause_id">Cause</label>
                     <select
                         className="form-select"
-                        value={formValue.cause}
+                        value={formValue.cause_id}
                         onChange={handleChange}
-                        name="cause"
-                        id="cause"
+                        name="cause_id"
+                        id="cause_id"
                     >
                         <option value="">--</option>
                         <option value="2">Animals</option>
