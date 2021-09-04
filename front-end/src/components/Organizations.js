@@ -17,6 +17,7 @@ const Organizations = () => {
     const [organizationData, setOrganizationData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalCount, setTotalCount] = useState(0);
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,8 +25,10 @@ const Organizations = () => {
                 `http://cors-anywhere.herokuapp.com/${PLEDGE_ORGANIZATIONS_ENDPOINT}?page=${currentPage}`,
                 { headers }
             );
-            console.log(res.data.results);
+            // console.log(res);
+            // console.log(res.data.results);
             setOrganizationData(res.data.results);
+            setLoaded(true);
             setTotalCount(res.data.total_count);
         };
         fetchData();
@@ -56,10 +59,6 @@ const Organizations = () => {
             >
                 Next Page
             </button>
-            <Link to="/categories" className="btn btn-warning">
-                Narrow it down
-            </Link>
-
             <h4>Pick a Charity Below and Donate. It's that simple.</h4>
             <h4>
                 Use the navbar links to search for a specific cause or for a

@@ -20,6 +20,7 @@ const CategorySearch = () => {
     const [totalCount, setTotalCount] = useState(0);
     const [payload, setPayload] = useState({});
     const [hasPayloadData, setHasPayloadData] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
