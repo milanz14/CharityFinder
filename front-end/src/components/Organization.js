@@ -1,5 +1,4 @@
 import React from "react";
-import GetDetailsBtn from "./GetDetailsBtn";
 import "../styles/Organization.css";
 
 const Organization = ({ id, name, city, zip, url, street, state }) => {
