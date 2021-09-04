@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Organization from "./Organization";
 import "../styles/Organizations.css";
 import axios from "axios";
@@ -55,6 +56,9 @@ const Organizations = () => {
             >
                 Next Page
             </button>
+            <Link to="/categories" className="btn btn-warning">
+                Narrow it down
+            </Link>
 
             <h4>Pick a Charity Below and Donate. It's that simple.</h4>
             <h4>

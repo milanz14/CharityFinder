@@ -27,10 +27,11 @@ const CategorySearch = () => {
                 `http://cors-anywhere.herokuapp.com/${PLEDGE_ORGANIZATIONS_ENDPOINT}?q=${payload.q}&region=${payload.region}&cause_id=${payload.cause_id}&postal_code=${payload.postal_code}&page=${currentPage}`,
                 { headers }
             );
-            // console.log(payload.cause_id);
-            // console.log(res);
-            // console.log(res.data.results);
-            // console.log(payload);
+            console.log(payload.cause_id);
+            console.log(payload.region);
+            console.log(res);
+            console.log(res.data.results);
+            console.log(payload);
             setOrganizationData(res.data.results);
             setTotalCount(res.data.total_count);
         };

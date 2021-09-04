@@ -6,8 +6,9 @@
 ### Live deployment: `coming soon`
 
 ## Technologies Used:
-  * React
+  * React (Front End)
   * Jest (testing)
+  * Node/Express (Back End)
 
 
 ## API:
