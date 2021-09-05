@@ -17,12 +17,6 @@ exports[`it should match the snapshot 1`] = `
     >
       Next Page
     </button>
-    <a
-      class="btn btn-warning"
-      href="/categories"
-    >
-      Narrow it down
-    </a>
     <h4>
       Pick a Charity Below and Donate. It's that simple.
     </h4>
