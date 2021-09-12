@@ -1,6 +1,6 @@
 ## CharityFinder
 
-### A webapp that helps you find charities in your area or specific causes you are passionate about.
+### A webapp that helps you find charities in your area or specific causes you are passionate about. Save your favorites for quick access to all charities that interest you.
 
 ## Part of the Springboard Program - Capstone #2
 ### Live deployment: `coming soon`
@@ -9,6 +9,7 @@
   * React (Front End)
   * Jest (testing)
   * Node/Express (Back End)
+  * Google OAuth2 (Back End)
 
 
 ## API:
