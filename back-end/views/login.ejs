@@ -20,6 +20,10 @@
             console.log('Name: ' + profile.getName());
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail());
+
+            //ID Token to pass to back end
+            let id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
         }
     </script>
     
