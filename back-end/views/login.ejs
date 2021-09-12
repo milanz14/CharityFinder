@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="745822092378-js38hhs9o4i8a7pkeqafm0hnqi6knns7.apps.googleusercontent.com">
+    <title>Login with Google</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <a href="#" onclick="signOut();">Sign Out</a>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        function onSignIn(googleUser) {
+            let profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); //do not sent to back end - use a token instead
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+        }
+    </script>
+    
+    <script>
+        function signOut() {
+            let auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(() => {
+                console.log('User Signed Out.');
+            });
+        }
+    </script>
+</body>
+</html>
